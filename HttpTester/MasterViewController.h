@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UIViewController
+
+@property(nonatomic, retain) IBOutlet UITextField *urlText;
+
+-(IBAction)issueRequest:(id)sender;
 
 @end

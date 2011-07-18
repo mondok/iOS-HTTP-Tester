@@ -17,6 +17,7 @@
 		C7A0E7EB13D49E7500498F18 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A0E7EA13D49E7500498F18 /* DetailViewController.m */; };
 		C7A0E7EE13D49E7500498F18 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A0E7EC13D49E7500498F18 /* MasterViewController.xib */; };
 		C7A0E7F113D49E7500498F18 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A0E7EF13D49E7500498F18 /* DetailViewController.xib */; };
+		C7A0E7FD13D4A31000498F18 /* PageScraper.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A0E7FC13D4A31000498F18 /* PageScraper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		C7A0E7EA13D49E7500498F18 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C7A0E7ED13D49E7500498F18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		C7A0E7F013D49E7500498F18 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		C7A0E7FB13D4A31000498F18 /* PageScraper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScraper.h; sourceTree = "<group>"; };
+		C7A0E7FC13D4A31000498F18 /* PageScraper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScraper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				C7A0E7EC13D49E7500498F18 /* MasterViewController.xib */,
 				C7A0E7EF13D49E7500498F18 /* DetailViewController.xib */,
 				C7A0E7DB13D49E7500498F18 /* Supporting Files */,
+				C7A0E7FB13D4A31000498F18 /* PageScraper.h */,
+				C7A0E7FC13D4A31000498F18 /* PageScraper.m */,
 			);
 			path = HttpTester;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				C7A0E7E513D49E7500498F18 /* HttpTesterAppDelegate.m in Sources */,
 				C7A0E7E813D49E7500498F18 /* MasterViewController.m in Sources */,
 				C7A0E7EB13D49E7500498F18 /* DetailViewController.m in Sources */,
+				C7A0E7FD13D4A31000498F18 /* PageScraper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +295,7 @@
 				C7A0E7F613D49E7500498F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

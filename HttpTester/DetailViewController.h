@@ -10,8 +10,10 @@
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property(nonatomic, retain) IBOutlet UITextView *httpDisplay;
+@property(nonatomic, retain) NSString *httpResult;
+
+
 
 @end
