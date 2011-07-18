@@ -8,19 +8,21 @@
 
 #import "HttpTesterAppDelegate.h"
 
-#import "HttpTesterViewController.h"
+#import "MasterViewController.h"
 
 @implementation HttpTesterAppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize navigationController = _navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[HttpTesterViewController alloc] initWithNibName:@"HttpTesterViewController" bundle:nil]; 
-    self.window.rootViewController = self.viewController;
+
+    MasterViewController *controller = [[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

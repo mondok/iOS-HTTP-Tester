@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class HttpTesterViewController;
-
 @interface HttpTesterAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) HttpTesterViewController *viewController;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end

@@ -1,14 +1,51 @@
 //
-//  HttpTesterViewController.m
+//  DetailViewController.m
 //  HttpTester
 //
 //  Created by user1 on 7/18/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "HttpTesterViewController.h"
+#import "DetailViewController.h"
 
-@implementation HttpTesterViewController
+@interface DetailViewController ()
+- (void)configureView;
+@end
+
+@implementation DetailViewController
+
+@synthesize detailItem = _detailItem;
+@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = NSLocalizedString(@"Detail", @"Detail");
+    }
+    return self;
+}
+
+#pragma mark - Managing the detail item
+
+- (void)setDetailItem:(id)newDetailItem
+{
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
+        
+        // Update the view.
+        [self configureView];
+    }
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item.
+
+    if (self.detailItem) {
+        self.detailDescriptionLabel.text = [self.detailItem description];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +59,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self configureView];
 }
 
 - (void)viewDidUnload
