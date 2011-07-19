@@ -13,7 +13,7 @@
 
 @implementation MasterViewController
 
-@synthesize urlText;
+@synthesize urlText,bodyText;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,12 +31,32 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma - Picker Stuff
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [verbs objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    selectedVerb = [verbs objectAtIndex:row];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [verbs count];
+}
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+    verbs = [[NSArray alloc] initWithObjects:@"GET", @"POST", @"HEAD", @"PUT", @"DELETE", nil];
+    selectedVerb = [verbs objectAtIndex:0];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
@@ -68,20 +88,18 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 -(IBAction)issueRequest:(id)sender{
     NSString *url = [urlText text];
+    NSString *body = [bodyText text];
     [urlText resignFirstResponder];
-    NSString *scrapeResult = [PageScraper requestPageWithString:url];
-    
+    NSString *scrapeResult = [PageScraper requestPageWithString:url headerVerb:selectedVerb requestBody:body];    
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     [detailViewController setHttpResult:scrapeResult];
     // Pass the selected object to the new view controller.    
     [self.navigationController pushViewController:detailViewController animated:YES];    
-    
 }
 
 

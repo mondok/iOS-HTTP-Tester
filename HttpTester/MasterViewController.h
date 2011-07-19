@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController
+@interface MasterViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+{
+    NSArray *verbs;
+    NSString *selectedVerb;
+    
+}
 
 @property(nonatomic, retain) IBOutlet UITextField *urlText;
+
+@property(nonatomic, retain) IBOutlet UITextView *bodyText;
 
 -(IBAction)issueRequest:(id)sender;
 

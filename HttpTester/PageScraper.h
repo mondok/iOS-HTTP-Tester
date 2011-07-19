@@ -10,6 +10,6 @@
 
 @interface PageScraper : NSObject
 
-+(NSString *) requestPageWithString:(NSString *)url;
++(NSString *) requestPageWithString:(NSString *)url headerVerb:(NSString *)verb requestBody:(NSString *)body;
 
 @end

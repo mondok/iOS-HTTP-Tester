@@ -10,9 +10,13 @@
 
 @implementation PageScraper
 
-+(NSString *)requestPageWithString:(NSString *)url{
++(NSString *) requestPageWithString:(NSString *)url headerVerb:(NSString *)verb requestBody:(NSString *)body{
     NSURL *theUrl = [NSURL URLWithString:url];
-    NSURLRequest *theRequest = [NSURLRequest requestWithURL:theUrl];
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:theUrl];
+    [theRequest setHTTPMethod:verb];
+    if (body){
+        [theRequest setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    }
     NSURLResponse *theResponse;
     NSError *error = [[NSError alloc] init];
     NSData *theData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&theResponse error:&error];
