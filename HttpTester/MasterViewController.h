@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface MasterViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate>
 {
     NSArray *verbs;
     NSString *selectedVerb;
