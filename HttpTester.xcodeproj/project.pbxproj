@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C740E3CE13D7042400B74188 /* BodySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C740E3CC13D7042400B74188 /* BodySelectionViewController.m */; };
+		C740E3CF13D7042400B74188 /* BodySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C740E3CD13D7042400B74188 /* BodySelectionViewController.xib */; };
 		C7A0E7D513D49E7500498F18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A0E7D413D49E7500498F18 /* UIKit.framework */; };
 		C7A0E7D713D49E7500498F18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A0E7D613D49E7500498F18 /* Foundation.framework */; };
 		C7A0E7D913D49E7500498F18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A0E7D813D49E7500498F18 /* CoreGraphics.framework */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C740E3CB13D7042400B74188 /* BodySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodySelectionViewController.h; sourceTree = "<group>"; };
+		C740E3CC13D7042400B74188 /* BodySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodySelectionViewController.m; sourceTree = "<group>"; };
+		C740E3CD13D7042400B74188 /* BodySelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodySelectionViewController.xib; sourceTree = "<group>"; };
 		C7A0E7D013D49E7500498F18 /* HttpTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HttpTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A0E7D413D49E7500498F18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C7A0E7D613D49E7500498F18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +104,9 @@
 				C7A0E7DB13D49E7500498F18 /* Supporting Files */,
 				C7A0E7FB13D4A31000498F18 /* PageScraper.h */,
 				C7A0E7FC13D4A31000498F18 /* PageScraper.m */,
+				C740E3CB13D7042400B74188 /* BodySelectionViewController.h */,
+				C740E3CC13D7042400B74188 /* BodySelectionViewController.m */,
+				C740E3CD13D7042400B74188 /* BodySelectionViewController.xib */,
 			);
 			path = HttpTester;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				C7A0E7EE13D49E7500498F18 /* MasterViewController.xib in Resources */,
 				C7A0E7F113D49E7500498F18 /* DetailViewController.xib in Resources */,
 				C7A0E80013D4AB0600498F18 /* README in Resources */,
+				C740E3CF13D7042400B74188 /* BodySelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +189,7 @@
 				C7A0E7E813D49E7500498F18 /* MasterViewController.m in Sources */,
 				C7A0E7EB13D49E7500498F18 /* DetailViewController.m in Sources */,
 				C7A0E7FD13D4A31000498F18 /* PageScraper.m in Sources */,
+				C740E3CE13D7042400B74188 /* BodySelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

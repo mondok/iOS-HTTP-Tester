@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "PageScraper.h"
+#import "BodySelectionViewController.h"
 
 @implementation MasterViewController
 
@@ -47,6 +48,13 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return [verbs count];
+}
+
+-(IBAction)selectVerb:(id)sender{
+    BodySelectionViewController *bodyView = [[BodySelectionViewController alloc] initWithNibName:@"BodySelectionViewController" bundle:nil];
+    [self.navigationController presentModalViewController:bodyView animated:YES];
+
+
 }
 
 

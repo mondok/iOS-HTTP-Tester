@@ -21,4 +21,6 @@
 
 -(IBAction)issueRequest:(id)sender;
 
+-(IBAction)selectVerb:(id)sender;
+
 @end
